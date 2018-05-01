@@ -1,0 +1,26 @@
+sudo: required
+
+services:
+  - docker
+
+env:
+  - DOCKER_COMPOSE_VERSION=1.21.0
+
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+
+script:
+  - scripts/hugo.sh
+
+deploy:
+  provider: s3
+  access_key_id:
+    secure: "P7aJSgdu1QXCKfarOupYOLKaJ6cbFRcVkf1sWahRbRGKROpRxxLUZpd1Aju0HlhP29sO3lw+sFmGrDx/VASFPGItsXDXhXe0FBHYLPNL270cOo/4F58LSf2CzD7IrT7Sy1M9faWY1V6ngMbo6xWhY6qWdPXXWVQw90Rk4aoIuAjK/YUPJTIC31zm7rn4fF9IXvJWrsLn0FnET0p/9hBj88VDVNrOoU0NXuQbgryRqVUBEgaBljSIGwnwXaQh7GSNOxUUcP+mIQN/RZaM+MGQPks/ssXFJeQvfE59yOWp+M2y1vZIJtethgTOO54QmJikHKkdHq9Hj3y8xQZ300RXwAFzDtRLnbFA4TM05V6ecdHdVqwRaCIYg/Y9Tn4PahVm91t5uLIwWeHa3l3J8S/uvDh9kgMkVGp02DX++VBl7qFPi4xB3+mCeAonQyN7ijlyksXMHgvQOskFNUF2mJwgO7kJRLQysvsxwjDCUJDqunOSbzbG714MqwJE5mfG0tR8eTilassC5X/uzbjEG6lY0jEHcmLOE54ZAgHeTlvoj+plKq68qzAJf2jcPzenKHq8hDvvCOCgp1lJsgbtlt+F6c5FA2ZUxvlVVqC/8dxnN4fvORmo+ysJi8L4Bmo10DpFQ5oeHgg4wYvvQfD8N3LHgY3mOmyYPsxe6ZE5Odpwy68="
+  secret_access_key:
+    secure: "M2cKSWQy1GfTptsg+yDu6Zg/Co64H5bVl+M372+uRDasy1sKIWbh1wG4UMTc1XxuUSRNgYmkzbKltG4MAJa6Y+KdPjIzVuboVfIakeYsIaekEjiXjlaHPESNffyGTTDL7r7HVIf5NeAc+reum6dPMopig1F4Y5JYhb6v+SAfr9zPP0fnAyXsKMtvIIiGiYShjZUUSPoI0C4eETNWiOk6v5NHvMajk9WPFC/BEfVasT1rBr93R13H33QQdgKHXQLRkYaAZEHSt4PvjKytUandVK5JT6Wqw6MZlQ8/4GJf9BV1qldCI1ggyphOU+lO004fPZXBEVq7Jq5n66e8lCR+Gs4b4JHXJXt7U9HNRWAkvVcfS8R3jTcta9p9I1sGiV9Hg/DEpFRfxhgRq5VzfAhS0Pix7yug2u9YDF9O1NKuOSCZvgF5Rj2PkWQrX758lHxVKs82JFO2sqcAswqPAS/7hy2iXzOqT9AjUdti33RmzM4UNywwl2c5ALohKVJ7SLVmZFWfvr8H3PbwP5uJzsSX/dKSi9J8Y56NVzQe6Rpya8/d54yyARxMum/CN7pnH7NRiXO2CVGZOkZ3c8EIRDmpFxG4sjoYKolJSjkL10ocKe8oZ2Q56bvtpOuW+SXMPPstSIUZrlz5hZHZqEH3nRAY3u3PhOfpXfT1l7Iy65SbTns="
+  bucket: "cleanzone-website"
+  skip_cleanup: true
+  local_dir: output
