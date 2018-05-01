@@ -12,7 +12,7 @@ Tel 070-5294677<br>
 Epost stad@lyheden.com<br>
 Organisationsnummer 556646-2031<br>
 
-
+<!--
 <form id="contactform" method="post" action="https://formspree.io/insert.your@mail.adress">
 	<div class="field half first">
 		<input type="text" name="name" id="name" placeholder="Name"/>
@@ -48,3 +48,4 @@ $(document).ready(function($) {
 
 
 {{< socialLinks >}}
+-->

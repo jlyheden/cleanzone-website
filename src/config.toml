@@ -3,14 +3,14 @@ title = "Lyheden Städtjänst"
 theme = "dimension"
 languageCode = "sv-se"
 defaultContentLanguage = "sv"
-enableRobotsTXT = true
+enableRobotsTXT = false
 disableKinds=["RSS"]
 publishDir = "/output"
 
 # footer: <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
 
 [params]
-  description = '<!--[-->Varmt Välkommen till Lyheden Städ Tjänst AB!<!--]--><br /> 
+  description = '<!--[-->Varmt välkommen till Lyheden Städtjänst AB!<!--]--><br /> 
     <!--[-->En liten och väl inarbetad firma i din närhet.<!--]-->' 
   #logo = "fa-diamond"
   logoimage = "images/2a768ad82432e230a09ceccfe4b01082.svg"
