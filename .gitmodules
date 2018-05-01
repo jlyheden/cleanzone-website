@@ -1,6 +1,3 @@
-[submodule "src/themes/identity"]
-	path = src/themes/identity
-	url = https://github.com/aerohub/hugo-identity-theme
 [submodule "src/themes/dimension"]
 	path = src/themes/dimension
 	url = https://github.com/sethmacleod/dimension.git
