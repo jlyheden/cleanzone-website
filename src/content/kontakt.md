@@ -5,33 +5,30 @@ weight: 20
 draft: false
 ---
 
-Lyheden Städ Tjänst AB<br>
-Roslagsvägen 39D<br>
-74842 Örbyhus<br>
-Tel 070-5294677<br>
-Epost stad@lyheden.com<br>
-Organisationsnummer 556646-2031<br>
+Kontakta oss gärna på formuläret nedan eller ring direkt på <a href="tel:0705294677">0705294677</a><br>
 
-<!--
-<form id="contactform" method="post" action="https://formspree.io/insert.your@mail.adress">
+<form id="contactform" method="post" action="https://formspree.io/stad-johan@lyheden.com">
+	<div class="field">
+		<input type="text" name="name" id="name" placeholder="Ditt namn"/>
+	</div>
 	<div class="field half first">
-		<input type="text" name="name" id="name" placeholder="Name"/>
+		<input type="text" name="phone" id="phone" placeholder="Ditt telefonnummer"/>
 	</div>
 	<div class="field half">
-		<input type="email" id="email" name="email" placeholder="Email">
+		<input type="email" id="email" name="email" placeholder="Din e-postadress">
 	</div>
 	<div class="field">
-		<textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+		<textarea name="message" id="message" rows="4" placeholder="Meddelande"></textarea>
 	</div>
 	<ul class="actions">
-		<li><input type="submit" value="Send message" class="special" /></li>
-		<li><input type="reset" value="Reset" /></li>
+		<li><input type="submit" value="Skicka" class="special" /></li>
+		<li><input type="reset" value="Ångra" /></li>
 	</ul>
 	<input type="hidden" name="_next" value="?sent#formspree" />
-	<input type="hidden" name="_subject" value="Subject for your mail like new message" />
+	<input type="hidden" name="_subject" value="Kontaktförfrågan" />
 	<input type="text" name="_gotcha" style="display:none" />
 </form>
-<span id="contactformsent">Thank you for your message</span>
+<span id="contactformsent">Tack för ditt meddelande! Vi återkommer inom kort</span>
 
 <script>
 $(document).ready(function($) { 
@@ -46,6 +43,16 @@ $(document).ready(function($) {
 });
 </script>
 
+---
 
+### Adress
+Lyheden Städ Tjänst AB<br>
+Roslagsvägen 39D<br>
+74842 Örbyhus<br>
+
+### Organisationsnummer
+556646-2031<br>
+
+<!--
 {{< socialLinks >}}
 -->

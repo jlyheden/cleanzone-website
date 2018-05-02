@@ -1,6 +1,7 @@
 version: "3.0"
 
 services:
+
   hugo:
     image: jojomi/hugo:latest
     volumes:
@@ -8,3 +9,8 @@ services:
       - ./output/:/output
     ports:
       - 1313
+
+  img-convert:
+    image: acleancoder/imagemagick-full
+    volumes:
+      - ./src/:/src
