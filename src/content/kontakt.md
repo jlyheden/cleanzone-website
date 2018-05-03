@@ -7,7 +7,7 @@ draft: false
 
 Kontakta oss gärna på formuläret nedan eller ring direkt på <a href="tel:0705294677">0705294677</a><br>
 
-<form id="contactform" method="post" action="https://formspree.io/stad-johan@lyheden.com">
+<form id="contactform" method="post" action="https://formspree.io/stad@lyheden.com">
 	<div class="field">
 		<input type="text" name="name" id="name" placeholder="Ditt namn"/>
 	</div>
